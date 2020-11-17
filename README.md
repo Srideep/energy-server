@@ -27,3 +27,8 @@ expecting something along those lines.
 And if there's anything special we have to do to run your program, just let us
 know. A Makefile never hurt anyone.
 
+
+### SOLUTION UPDATE
+## Please use Poetry to initialize and upate the project dependencies. The main .py file for the application is exceuted through the bash wrapper which run the script in the background.
+
+

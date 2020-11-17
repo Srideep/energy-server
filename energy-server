@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./energy-server.py &> /dev/null &
+
+rm nohup.out
