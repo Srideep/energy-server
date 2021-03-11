@@ -36,7 +36,7 @@ steps:
     displayName: 'Running the Server'
   
 - task: Sending data to the listening server
-  input:
+  inputs:
     script: curl -d "starttime=1602870756&endtime=1602870872" http://localhost:8080/
 
     
