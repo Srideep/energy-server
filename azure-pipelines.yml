@@ -20,24 +20,17 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
   
-- task: InstallDependency@0
-  inputs:
-    script: python -m pip install --upgrade pip setuptools wheel
-    displayName: 'Install dependencies'
   
-- task: InstallRequirments@0
-  inputs:
-    script: pip install -r requirements.txt
-    displayName: 'Install requirements'
+- script: python -m pip install --upgrade pip setuptools wheel
+  displayName: 'Install dependencies'
   
-- task: Starting_up_the_Server@0
-  inputs:
-    script: ./energy-server &
-    displayName: 'Running the Server'
+- script: pip install -r requirements.txt
+  displayName: 'Install requirements'
   
-- task: Sendingdatatothelistening server@0
-  inputs:
-    script: curl -d "starttime=1602870756&endtime=1602870872" http://localhost:8080/
+- script: ./energy-server &
+  displayName: 'Running the Server'
+  
+- script: curl -d "starttime=1602870756&endtime=1602870872" http://localhost:8080/
 
     
   
